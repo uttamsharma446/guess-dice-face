@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1>Roll the Dice</h1>
+        <!-- <span class="horizontal-line"></span> -->
+        <div id="status">
+          <span class=""
+            >Selected Variable: <span class="selectedNumber"></span
+          ></span>
+          <img id="dice" src="Images/1.png" alt="" width="60" data-dice />
+          <div>Score: <span class="score">0</span></div>
+        </div>
+        <div class="numbers">
+          <div class="all-numbers">
+            <button id="btn-1" class="number-btn" data-btn>1</button>
+            <button id="btn-2" class="number-btn" data-btn>2</button>
+            <button id="btn-3" class="number-btn" data-btn>3</button>
+          </div>
+          <div class="all-numbers">
+            <button id="btn-4" class="number-btn" data-btn>4</button>
+            <button id="btn-5" class="number-btn" data-btn>5</button>
+            <button id="btn-6" class="number-btn" data-btn>6</button>
+          </div>
+        </div>
+        <p class="loading">Loading! Game will start in a few second!</p>
+        <span class="timer"
+          >The Dice Will chagne in <span class="count"> 5</span> seconds</span
+        >
+        <span class="msg">sfdf</span>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

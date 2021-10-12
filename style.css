@@ -1,0 +1,127 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Cabin', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+.main{
+    max-width: 600px;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #082032;
+    color: #fff;
+
+}
+.main h1{
+    font-size: 3rem;
+    color: #fff;
+    transition: 1s;
+
+}
+.hidden{
+    opacity: 0;
+}
+#dice{
+    position:absolute;
+    left: 46%;
+    top: 0;
+    opacity:1;
+    cursor: pointer;
+    transition: margin 1s,transform 0.5s;
+    box-shadow: 8px 8px 5px 1px #000;
+}
+#dice:hover{
+    margin:10px;
+    transform: scale(1.2);
+}
+#dice.changed{    
+    margin:10px;
+    transform: scale(1.2);
+}
+#status{
+  
+    position: relative;
+    margin: 10px 0;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.numbers{
+    margin-top: 70px;
+}
+.all-numbers{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 0;
+
+}
+.number-btn{
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    border:1px solid #fff;
+    background-color: #082032;
+    color: #fff;
+    border-radius: 5px;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    
+}
+.number-btn:hover{    
+    transform: scale(1.2);    
+}
+.number-btn.active{
+    background-color: #777;
+}
+.horizontal-line{
+    border-top: 1px solid #fff;
+    display: block;
+    width: 100%;
+}
+span.timer{
+    margin-top: 20px;
+}
+.loading{
+    opacity: 0;
+}
+
+.timer{
+    opacity: 0;
+}
+.msg{
+
+    font-size: 1.5rem;
+    width: 100%;
+  
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background-color: #777;
+    opacity: 0;
+    transition: opacity 1s;
+
+
+}
+.show{
+    opacity:1;
+}
+.hide{
+    opacity: 0;
+}
