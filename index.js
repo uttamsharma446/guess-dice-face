@@ -6,6 +6,8 @@ const selectedNumber = document.querySelector(".selectedNumber");
 const dice = document.getElementById("dice");
 const countElement = document.querySelector(".count");
 const timerElement = document.querySelector(".timer");
+const countDownElement = document.querySelector(".countdown");
+const countDownTimer = document.querySelector(".countdown-timer");
 var selectedId;
 var diceClicked = false;
 var timer;
@@ -22,14 +24,26 @@ document.addEventListener("click", (e) => {
     title.classList.remove("show");
     title.classList.add("hide");
     document.querySelector(".loading").classList.add("show");
+    countDownElement.style.display = "flex";
+    const countDownInterval = setInterval(() => {
+      countDownTimer.innerHTML = count;
+      count = count - 1;
+      if (count === -1) {
+        countDownTimer.innerHTML = "Go";
+      }
+    }, [1000]);
     randomNumber = getRandomInt(1, 6);
     setTimeout(() => {
+      clearInterval(countDownInterval);
+
+      countDownElement.style.display = "none";
       document.querySelector(".loading").classList.remove("show");
       timerElement.classList.add("show");
       setTimer();
 
       changeDiceFace(randomNumber);
-    }, 4000);
+      count = 5;
+    }, 7000);
   }
 });
 
