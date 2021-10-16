@@ -29,7 +29,7 @@ document.addEventListener("click", (e) => {
       countDownTimer.innerHTML = count;
       count = count - 1;
       if (count === -1) {
-        countDownTimer.innerHTML = "Go";
+        countDownTimer.innerHTML = "Go!!";
       }
     }, [1000]);
     randomNumber = getRandomInt(1, 6);
